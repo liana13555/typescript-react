@@ -1,0 +1,36 @@
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script type="text/babel">
+
+  /* The React fragment allows us to put elements side by side without having to have some sort of container element like a div. 
+  This can be useful when you're creating things like tables that have a specific structure to them.
+  */
+
+  const element = (
+    <>
+      <span>Hello</span> <span>World</span>
+    </>
+  )
+  
+  // const element = (
+  //   <React.Fragment>
+  //     <span>Hello</span> <span>World</span>
+  //   </React.Fragment>
+  // )
+
+  // const helloElement = React.createElement('span', null, 'Hello')
+  // const worldElement = React.createElement('span', null, 'World')
+  // const element = React.createElement(
+  // React.Fragment, 
+  //   null, 
+  //   helloElement,
+  //   ' ',
+  //   worldElement,
+  // )
+ 
+  ReactDOM.render(element, document.getElementById('root'))
+  </script>
+</body>
